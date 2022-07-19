@@ -1,0 +1,11 @@
+What is Implementation in algorithm?
+-> Implementation is what can be come up in mind, but hard to write as a source code
+
+Implementation examples
+1. A problem that has a simple algorithm, but its code is too long
+2. A problem that deal with natural number, printing the floating points are needed
+3. A problem that deal with string with a certain criteria
+4. A problem that proper libraries are needed
+
+Matrix: 2D area
+Unit Vector: simulation & total search

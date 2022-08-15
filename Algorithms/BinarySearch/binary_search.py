@@ -19,12 +19,13 @@ def binary_search(arr, target, start, end):
 
 
 # n = number of elems, target = the value what we want to find
-n, target = list(map(int, input().split()))
+n, target = list(map(int, input('Length, Target: ').split()))
 
-arr = list(map(int, input().split()))
+arr = list(map(int, input('Array Elements: ').split()))
 
 result = binary_search(arr, target, 0, n - 1)
 if result is None:
     print('Not found')
 else:
     print(result + 1)
+

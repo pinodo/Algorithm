@@ -24,17 +24,25 @@
 
 class Solution:
     def maxSubArray(self, nums: list[int]) -> int:
-        if 1 <= len(nums) <= 10**5:
+        arr = [nums[0]]
+        maxSum = arr[0]
+        for i in range(1, len(nums)):
+            arr.append(max(arr[i - 1] + nums[i], nums[i]))
+            if arr[i] > maxSum:
+                maxSum = arr[i]
+        return maxSum
+
+        # if 1 <= len(nums) <= 10**5:
             # TRY_2
             # maxSum = 0
             # currentSum = nums[0]
-            for i in nums:
-                if -10**4 <= i <= 10**4:
+            # for i in nums:
+            #     if -10**4 <= i <= 10**4:
                     # TRY_3
-                    for i in range(1, len(nums)):
-                        if nums[i - 1] > 0:
-                            nums[i] += nums[i - 1]
-                    return max(nums)
+                    # for i in range(1, len(nums)):
+                    #     if nums[i - 1] > 0:
+                    #         nums[i] += nums[i - 1]
+                    # return max(nums)
 
                     # TRY_2
                     # if currentSum < 0:
@@ -43,10 +51,10 @@ class Solution:
                     # if currentSum > maxSum:
                     #     maxSum = currentSum
                     # return max(maxSum, currentSum)
-                else:
-                    raise ValueError('Invalid value')
-        else:
-            raise ValueError('Invalid length')
+        #         else:
+        #             raise ValueError('Invalid value')
+        # else:
+        #     raise ValueError('Invalid length')
 
         # TRY_1
         # total_prod = nums[0]
